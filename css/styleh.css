@@ -31,15 +31,13 @@ header.container {
     top: 0;
     left: 0;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 60px;
     background: rgba(0,0,0,0.3);
     backdrop-filter: blur(8px);
     z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 880px;
-    margin-left: 2px;
     flex-wrap: wrap;
 }
 
