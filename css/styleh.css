@@ -38,7 +38,7 @@ header.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 0px;
     flex-wrap: wrap;
 }
 
