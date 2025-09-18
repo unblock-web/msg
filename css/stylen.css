@@ -1,0 +1,153 @@
+/* Импорт шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/img/7.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Обёртка */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ---------- Шапка ---------- */
+header.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
+}
+
+/* Меню */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li.active a,
+nav ul li a:hover {
+    color: #00e5ff; /* неоновый голубой */
+    text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
+}
+
+/* ---------- Блок пользователя ---------- */
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.user-box i {
+    font-size: 28px;
+    color: #00e5ff;
+    text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
+}
+
+.user-box a {
+    color: #9d4edd;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.user-box a:hover {
+    color: #d633ff;
+    text-shadow: 0 0 5px #d633ff, 0 0 15px #d633ff;
+}
+
+/* ---------- Герой ---------- */
+.hero.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+
+.hero--info {
+    max-width: 1100px;
+}
+
+.hero--info h2 {
+    font-size: 22px;
+    color: #00e5ff;
+    text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
+}
+
+.hero--info h1 {
+    font-size: 42px;
+    margin: 15px 0;
+    color: #fff;
+    text-shadow: 0 0 5px #9811ff, 0 0 15px #9811ff;
+}
+
+.hero--info p {
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: #ddd;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+.hero--info .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #5c6bc0;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 10px #5c6bc0, 0 0 20px #5c6bc0;
+}
+
+.hero--info .btn:hover {
+    background: #3949ab;
+    box-shadow: 0 0 15px #3949ab, 0 0 30px #3949ab;
+}
+
+/* Картинка справа */
+.hero img {
+    max-width: 1000px;
+    width: 100%;
+}

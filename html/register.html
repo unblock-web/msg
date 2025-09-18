@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/css/styler.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">  
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- указываем метод POST и action на обработчик -->
+        <form action="functions/register.php" method="post">
+            <h1>Регистрация</h1>
+
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Имя" required>
+                <i class='bx bx-user'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="email" name="email" placeholder="Почта" required>
+                <i class='bx bx-envelope'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Пароль" required>
+                <i class='bx bx-lock'></i>
+            </div>
+
+            <div class="remember">
+                <label>
+                    <input type="checkbox" required>
+                    Я принимаю политику компании
+                </label>
+            </div>
+
+            <button type="submit" class="btn">Зарегистрироваться</button>
+
+            <div class="register-link">
+                <p>Уже есть аккаунт? <a href="index.html">Войти</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
