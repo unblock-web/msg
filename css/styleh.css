@@ -13,13 +13,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('/msg/img/4.jpg') no-repeat;
+    background: url('/msg/img/4.jpg') no-repeat center center;
     background-size: cover;
-    background-position: center;
 }
 
 /* Обёртка */
 .wrapper {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -34,15 +34,15 @@ header.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
-    background: rgba(0,0,0,0.3);
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
     z-index: 1000;
     flex-wrap: wrap;
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 1.8rem;
     font-weight: 600;
     color: #ffffff;
     text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
@@ -53,6 +53,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -64,7 +65,7 @@ nav ul li a {
 
 nav ul li.active a,
 nav ul li a:hover {
-    color: #00e5ff; /* неоновый голубой */
+    color: #00e5ff;
     text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
 }
 
@@ -74,6 +75,7 @@ nav ul li a:hover {
     align-items: center;
     gap: 8px;
     font-weight: 600;
+    flex-wrap: nowrap;
 }
 
 .user-box i {
@@ -99,8 +101,11 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 120px;
+    padding: 0 20px;
     flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
 }
 
 .hero--info {
@@ -108,13 +113,13 @@ nav ul li a:hover {
 }
 
 .hero--info h2 {
-    font-size: 22px;
+    font-size: 1.2rem;
     color: #00e5ff;
     text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
 }
 
 .hero--info h1 {
-    font-size: 42px;
+    font-size: 2.5rem;
     margin: 15px 0;
     color: #fff;
     text-shadow: 0 0 5px #ff4081, 0 0 15px #ff4081;
@@ -122,7 +127,7 @@ nav ul li a:hover {
 
 .hero--info p {
     margin-bottom: 25px;
-    font-size: 18px;
+    font-size: 1rem;
     color: #ddd;
     text-shadow: 0 0 5px rgba(0,0,0,0.7);
 }
@@ -134,7 +139,7 @@ nav ul li a:hover {
     border: none;
     border-radius: 40px;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     transition: 0.3s;
@@ -147,3 +152,76 @@ nav ul li a:hover {
     box-shadow: 0 0 15px #3949ab, 0 0 30px #3949ab;
 }
 
+/* ---------- Адаптив ---------- */
+@media (max-width: 1024px) {
+    header.container {
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero.container {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .user-box {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .hero--info h1 {
+        font-size: 2rem;
+    }
+
+    .hero--info h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header.container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero--info h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero--info p {
+        font-size: 0.9rem;
+    }
+
+    .hero--info .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
